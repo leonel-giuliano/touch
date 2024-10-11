@@ -27,7 +27,7 @@ typedef union {
 
 typedef uint8_t errorEvent_t;
 enum {
-    ERROR_FILE
+    ERROR_FILE = 1,
 };
 
 
