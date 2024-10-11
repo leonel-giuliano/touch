@@ -16,6 +16,10 @@ errorEvent_t errorHandler(errorEvent_t e, ...) {
         case ERROR_FILE:
             fprintf(stderr, "cannot access '%s': %s\n", va_arg(arg, const char *), strerror(errno));
             break;
+
+        case ERROR_FTIME:
+            fprintf(stderr, "problem modifying the file time: %s\n", strerror(errno));
+            break;
     }
 
     return e;
