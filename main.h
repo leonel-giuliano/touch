@@ -23,5 +23,16 @@ typedef union {
 } flags8_t;
 
 
+// ERROR EVENTS
+
+typedef uint8_t errorEvent_t;
+enum {
+    ERROR_FILE
+};
+
+
+// Prints error message in the stderr
+errorEvent_t errorHandler(errorEvent_t e, ...);
+
 
 #endif
